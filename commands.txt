@@ -1,0 +1,41 @@
+1. net user
+   Purpose: Displays all local user accounts present on the system.
+
+2. net user internuser * /add
+   Purpose: Creates a new local user account named "internuser" and securely prompts for a password.
+
+3. net user internuser
+   Purpose: Displays detailed configuration and status of the specified user account.
+
+4. net localgroup
+   Purpose: Lists all local groups available on the system.
+
+5. net localgroup users internuser /add
+   Purpose: Adds the user "internuser" to the standard Users group.
+
+6. runas /user:internuser cmd
+   Purpose: Opens a new Command Prompt session as another user to demonstrate privilege separation.
+
+7. mkdir C:\interntask
+   Purpose: Creates a directory for performing file and permission operations.
+
+8. echo Initial file content > C:\interntask\intern_test.txt
+   Purpose: Creates a text file and writes initial content (overwrites if file exists).
+
+9. type C:\interntask\intern_test.txt
+   Purpose: Displays the contents of the text file to verify written data.
+
+10. echo Additional content added >> C:\interntask\intern_test.txt
+    Purpose: Appends new content to the existing file without deleting previous data.
+
+11. echo Another test file > C:\interntask\new_file
+    Purpose: Creates another file inside the directory for file operation testing.
+
+12. del C:\interntask\new_file
+    Purpose: Deletes the specified file from the directory.
+
+13. icacls C:\interntask
+    Purpose: Displays NTFS Access Control List (ACL) permissions applied to the folder.
+
+14. net user internuser /delete
+    Purpose: Deletes the specified local user account from the system (administrator privileges required).
