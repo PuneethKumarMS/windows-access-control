@@ -1,0 +1,40 @@
+1. mkdir C:\Folder_Name  
+   (Run as Administrator)
+   Purpose: Simulate a Weak Permission
+ 
+   icacls C:\Folder_Name /grant Users:F
+   Purpose: Intentionally Misconfigure Permissions
+
+2. icacls C:\Folder_Name
+   Purpose: Verify The Weak Permission(Detection)
+   
+   If you See  "BUILTIN\Users:(F)" it is a Red Flag(normal user should never have full control over sensitive files)
+
+3. icacls C:\Folder_Name /remove Users
+   Purpose: Remove Dangerous Permissions
+
+4. icacls C:\Folder_Name /grant Users:R
+   Purpose: Grant Only Read Access(if needed)
+
+   icacls C:\Folder_Name
+   (VERIFY AGAIN)
+
+5. takeown /f C:\Folder_Name /r /d /y
+   Purpose: Take Back Ownership
+
+6. icacls C:\Folder_Name /grant Administrators:F /t
+   Purpose: Restore Admin Permissions
+
+
+********** THE EXACT PROCESS USED WHEN ******************:
+
+      - Ransomware Locks Files
+      - Malware Hides Persistence
+      - Incident Responders clean Infected Systems
+      - SOC Teams Regain Control After Breach
+
+"-----By Taking ownership using TAKEOWN and restoring administrative permission using ICACLS------"
+
+      OWNERSHIP: Controls Permissions
+      Permissions: Control Access
+
