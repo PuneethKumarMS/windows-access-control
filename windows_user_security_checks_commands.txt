@@ -1,0 +1,38 @@
+1. net user
+   Purpose: List All Users(First Check)
+
+2. net user username
+   Purpose: Check User Details
+
+3. net localgroup administrators
+   Purpose: Check Admin Privileges(CRITICAL)
+
+4. query user
+   Purpose: Check Active Logged-In Users
+
+5. eventvwr
+   Purpose: Check Failed Login Attempts(Event Logs)
+
+6. icacls C:\folder_name
+   Purpose: Check File Access Abuse
+
+7. dir C:\Windows /T:W
+   Purpose: Check Recently Modified Files
+
+8. schtasks
+   Purpose: Check Scheduled Tasks(Advanced But Important)
+
+***** What TO DO if User is Compromised ( RESPONSE) *****
+
+9. net user username /active:no
+   Purpose: Response and Immediate actions(Disable Account)
+
+                     (OR)
+
+   net user username /delete
+   Purpose: Deletes Account
+
+10. icacls C:\ /verify
+    Purpose: Review Permission
+
+
