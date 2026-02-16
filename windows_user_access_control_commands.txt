@@ -4,7 +4,7 @@
 2. net user username * /add
    Purpose: Creates a new local user account named "internuser" and securely prompts for a password.
 
-3. net user internuser
+3. net user username
    Purpose: Displays detailed configuration and status of the specified user account.
 
 4. net localgroup
@@ -13,29 +13,29 @@
 5. net localgroup users username /add
    Purpose: Adds the user "username" to the standard Users group.
 
-6. runas /user:internuser cmd
+6. runas /user:username cmd
    Purpose: Opens a new Command Prompt session as another user to demonstrate privilege separation.
 
-7. mkdir C:\interntask
+7. mkdir C:\Folder_Name
    Purpose: Creates a directory for performing file and permission operations.
 
-8. echo Initial file content > C:\interntask\intern_test.txt
+8. echo Initial file content > C:\Folder_Name\File_name
    Purpose: Creates a text file and writes initial content (overwrites if file exists).
 
-9. type C:\interntask\intern_test.txt
+9. type C:\Folder_Name\File_name
    Purpose: Displays the contents of the text file to verify written data.
 
-10. echo Additional content added >> C:\interntask\intern_test.txt
+10. echo Additional content added >> C:\Folder_Name\File_Name
     Purpose: Appends new content to the existing file without deleting previous data.
 
-11. echo Another test file > C:\interntask\new_file
+11. echo Another test file > C:\Folder_Name\File
     Purpose: Creates another file inside the directory for file operation testing.
 
-12. del C:\interntask\new_file
+12. del C:\Folder\new_file
     Purpose: Deletes the specified file from the directory.
 
-13. icacls C:\interntask
+13. icacls C:\Folder
     Purpose: Displays NTFS Access Control List (ACL) permissions applied to the folder.
 
-14. net user internuser /delete
+14. net user username /delete
     Purpose: Deletes the specified local user account from the system (administrator privileges required).
