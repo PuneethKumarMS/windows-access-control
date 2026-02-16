@@ -10,8 +10,8 @@
 4. net localgroup
    Purpose: Lists all local groups available on the system.
 
-5. net localgroup users internuser /add
-   Purpose: Adds the user "internuser" to the standard Users group.
+5. net localgroup users username /add
+   Purpose: Adds the user "username" to the standard Users group.
 
 6. runas /user:internuser cmd
    Purpose: Opens a new Command Prompt session as another user to demonstrate privilege separation.
