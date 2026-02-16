@@ -1,7 +1,7 @@
 1. net user
    Purpose: Displays all local user accounts present on the system.
 
-2. net user internuser * /add
+2. net user username * /add
    Purpose: Creates a new local user account named "internuser" and securely prompts for a password.
 
 3. net user internuser
